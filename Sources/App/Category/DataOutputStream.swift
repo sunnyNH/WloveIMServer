@@ -36,7 +36,7 @@ struct DataOutputStream {
     mutating func writeInt(_ v: Int32) {
         var ch = [UInt8](repeating: 0, count: 4)
         for i in 0..<4 {
-            ch[i] = (UInt8(UInt8((v >> (3 - i*8)) & 0x0ff)))
+            ch[i] = (UInt8(UInt8((v >> ((3 - i)*8)) & 0x0ff)))
         }
         self.data.append(ch, length: 4)
         lenght = lenght + 4;
