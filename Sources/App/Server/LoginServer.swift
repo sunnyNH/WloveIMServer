@@ -9,7 +9,7 @@ import Foundation
 import Vapor
 struct LoginServer: ServerProrocol {
     //业务服务器内部地址 校验token信息
-    static let loginUrl: String = ""
+    static let loginUrl: String = "http://0.0.0.0:8000/api/v1/inner/accesstoken"
     func registered() {
         let key = "\(IM_BaseDefine_ServiceID.sidLogin.rawValue)-\(IM_BaseDefine_LoginCmdID.cidLoginReqUserlogin.rawValue)"
         servers[key] = self
