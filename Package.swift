@@ -1,7 +1,7 @@
 import PackageDescription
 
 let package = Package(
-    name: "imServer",
+    name: "WloveIMServer",
     targets: [
         Target(name: "App"),
         ],
